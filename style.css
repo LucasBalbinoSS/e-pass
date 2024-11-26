@@ -1,0 +1,9 @@
+/* menu mobile toggle */
+.topo-mobile {
+  transition:opacity 200ms, visibility 200ms;
+}
+
+.topo-mobile-input:checked + .topo-mobile {
+  visibility: visible;
+  opacity: 1;
+}

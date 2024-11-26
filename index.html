@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Belleza&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <title>E-PASS</title>
+</head>
+<body class="font-['Josefin_Sans']">
+  <header class="px-4 py-0.5 border-b border-white/20 fixed z-10 inset-x-0 text-white bg-[#0097b8]">
+    <div class="grid items-center grid-cols-3 lg:max-w-[1200px] lg:mx-auto">
+      <a class="col-span-2 w-max lg:col-span-1" href="#" target="_self">
+        <img class="h-20 lg:hidden" src="./images/logo_redonda.png" alt="Logo">
+        <img class="w-40 hidden lg:block" src="./images/logo.png" alt="Logo">
+      </a>
+      <label class="flex cursor-pointer justify-self-end lg:hidden" for="topo-mobile">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="size-9 text-white">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
+        </svg>
+      </label>
+      <input class="hidden topo-mobile-input js-topo-mobile-input" type="checkbox" name="topo-mobile" id="topo-mobile">
+      <nav class="absolute invisible w-64 overflow-hidden bg-white text-[#0097b8] border border-gray-100 rounded-lg shadow-md opacity-0 border-opacity-80 top-full right-4 lg:hidden topo-mobile">
+        <ul class="bg-white border-gray-100 shadow-md js-topo-mobile-lista">
+          <li class="transition-colors duration-300 hover:bg-gray-50">
+            <a class="inline-block w-full p-4 transition-transform duration-75 active:scale-95" href="#servicos">Serviços</a>
+          </li>
+          <li class="transition-colors duration-300 hover:bg-gray-50">
+            <a class="inline-block w-full p-4 transition-transform duration-75 active:scale-95" href="#sobre">Sobre</a>
+          </li>
+          <li class="transition-colors duration-300 hover:bg-gray-50">
+            <a class="inline-block w-full p-4 transition-transform duration-75 active:scale-95" href="#contato">Contato</a>
+          </li>
+          <ul class="flex items-center gap-4 p-4">
+            <li class="flex">
+              <a class="inline-block p-2 transition-colors duration-300 border border-gray-200 rounded-md hover:bg-gray-50" href="#" target="_blank" rel="external">
+                <svg class="size-7" viewBox="0 0 512 512" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"></path></svg>
+              </a>
+            </li>
+            <li class="flex">
+              <a class="inline-block p-2 transition-colors duration-300 border border-gray-200 rounded-md hover:bg-gray-50" href="#" target="_blank" rel="external">
+                <svg class="size-7" viewBox="0 0 448 512" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg>
+              </a>
+            </li>
+          </ul>
+        </ul>
+      </nav>
+      <nav class="hidden lg:block justify-self-center">
+        <ul class="flex items-center gap-2">
+          <li class="relative after:h-2 after:rounded-full after:w-2 after:opacity-0 hover:after:opacity-100 after:transition-opacity after:duration-300 after:bg-white after:absolute after:-bottom-[0.95rem] after:left-1/2 after:transform after:-translate-x-1/2">
+            <a class="inline-block p-2" href="#servicos">Serviços</a>
+          </li>
+          <li class="relative after:h-2 after:rounded-full after:w-2 after:opacity-0 hover:after:opacity-100 after:transition-opacity after:duration-300 after:bg-white after:absolute after:-bottom-[0.95rem] after:left-1/2 after:transform after:-translate-x-1/2">
+            <a class="inline-block p-2" href="#sobre">Sobre</a>
+          </li>
+          <li class="relative after:h-2 after:rounded-full after:w-2 after:opacity-0 hover:after:opacity-100 after:transition-opacity after:duration-300 after:bg-white after:absolute after:-bottom-[0.95rem] after:left-1/2 after:transform after:-translate-x-1/2">
+            <a class="inline-block p-2" href="#contato">Contato</a>
+          </li>
+        </ul>
+      </nav>
+      <nav class="hidden lg:block">
+        <ul class="flex items-center gap-2.5 justify-end">
+          <li class="flex">
+            <a class="inline-block p-1 transition-colors duration-300 border border-white/50 rounded-md hover:bg-white group" href="https://www.facebook.com/bruno.silva.3990418/" target="_blank" rel="external">
+              <svg class="size-6 group-hover:text-[#0097b8]" viewBox="0 0 512 512" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"></path></svg>
+            </a>
+          </li>
+          <li class="flex">
+            <a class="inline-block p-1 transition-colors duration-300 border border-white/50 rounded-md hover:bg-white group" href="https://www.instagram.com/eubrunomezenga" target="_blank" rel="external">
+              <svg class="size-6 group-hover:text-[#0097b8]" viewBox="0 0 448 512" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section id="servicos" class="pt-40 lg:h-screen bg-[#0097b8] text-white/80 scroll-mt-8 px-4 py-14 lg:mx-auto">
+      <div class="lg:max-w-[1000px] lg:justify-center flex flex-col-reverse gap-7 lg:gap-14 lg:flex-row lg:items-center mx-auto">
+        <div class="flex flex-col gap-7">
+          <div>
+            <h2 class="text-3xl lg:text-5xl font-bold text-white pb-1">E-pass</h2>
+            <span class="text-white lg:text-lg">Sistema de Gerenciamento e Segurança</span>
+          </div>
+          <p class="leading-relaxed lg:text-lg lg:max-w-[33.75rem] text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum officia consequuntur culpa placeat. Laboriosam tempore cupiditate porro numquam exercitationem eos qui, voluptate velit corporis molestiae, consequuntur distinctio facere fugiat tempora?
+          Obcaecati magnam amet recusandae illum, at doloremque repudiandae ipsum quisquam, dolore repellat quos vel. Quibusdam molestias id autem ipsam, praesentium iusto ullam consequuntur odio quam odit nemo tenetur quaerat similique.
+        </div>
+        <div class="overflow-hidden">
+          <img loading="eager" class="lg:hover:rotate-12 transition-transform duration-500 inline-block w-full lg:w-auto" src="./images/logo_redonda.png" alt="Imagem do candidato a vereador Bruno Mezenga">
+        </div>
+      </div>
+    </section>
+    <section id="servicos" class="scroll-mt-8 px-4 py-14 lg:max-w-[1100px] lg:justify-center flex flex-col-reverse gap-7 lg:gap-14 lg:flex-row lg:items-center lg:mx-auto">
+      <div class="flex flex-col gap-7">
+        <h2 class="text-3xl lg:5xl text-[#0097b8] font-bold border-b border-slate-200 pb-7">Nosso App</h2>
+        <p class="leading-relaxed lg:max-w-[33.75rem] text-justify lg:text-lg text-slate-600">O aplicativo da E-pass garante promover a acessibilidade e segurança para com instituições, por meio de verificação digital na catraca, sendo apenas liberada para estudantes ou funcionários autorizados da instituição. Essa abordagem não apenas simplifica o processo de entrada, mas também reforça a segurança, impedindo o acesso de pessoas não previamente cadastradas no banco de dados da instituição.<br>Disponível para IOS e Android. </p>
+        <div>
+          <p class="mb-2 text-[#0097b8] font-bold">Selecione o sistema para instalar</p>
+          <div class="flex flex-col gap-4 lg:flex-row">
+            <button class="flex items-center gap-1 justify-center lg:w-48 py-3 text-white hover:bg-white hover:text-[#0097b8] transition-colors duration-300 border border-transparent hover:border-[#0097b8] px-10 bg-[#0097b8] rounded-md ">
+              IOS
+              <svg class="size-5 mb-2" enable-background="new 0 0 56.693 56.693" id="Layer_1" fill="currentColor" version="1.1" viewBox="0 0 56.693 56.693" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><path d="M41.777,30.517c-0.062-6.232,5.082-9.221,5.312-9.372c-2.891-4.227-7.395-4.807-8.998-4.873   c-3.83-0.389-7.477,2.256-9.42,2.256c-1.939,0-4.941-2.199-8.117-2.143c-4.178,0.062-8.029,2.43-10.179,6.17   c-4.339,7.527-1.11,18.682,3.118,24.791c2.067,2.986,4.532,6.346,7.766,6.223c3.117-0.123,4.293-2.016,8.061-2.016   s4.826,2.016,8.123,1.953c3.352-0.061,5.477-3.043,7.527-6.041c2.373-3.469,3.35-6.828,3.408-6.998   C48.305,40.433,41.844,37.958,41.777,30.517z"/><path d="M35.582,12.229c1.715-2.082,2.877-4.975,2.561-7.855c-2.475,0.1-5.471,1.645-7.248,3.725   c-1.592,1.846-2.984,4.785-2.611,7.613C31.045,15.926,33.861,14.307,35.582,12.229z"/></g></svg>
+            </button>
+            <button class="flex items-center gap-1 justify-center lg:w-48 py-3 text-white hover:bg-white hover:text-[#0097b8] transition-colors duration-300 border border-transparent hover:border-[#0097b8] px-10 bg-[#0097b8] rounded-md ">
+              Android
+              <svg class="size-5 mb-1" fill="currentColor" enable-background="new 0 0 56.693 56.693" id="Layer_1" version="1.1" viewBox="0 0 56.693 56.693" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><path d="M35.021,8.568l0.547-0.819l0.537-0.808l1.209-1.813c0.148-0.223,0.088-0.523-0.133-0.672   c-0.225-0.149-0.525-0.089-0.674,0.135l-1.295,1.944l-0.545,0.817L34.114,8.18c-1.752-0.679-3.705-1.06-5.768-1.06   c-2.061,0-4.014,0.381-5.766,1.06L22.03,7.352l-0.545-0.817L20.188,4.59c-0.148-0.223-0.449-0.283-0.673-0.135   c-0.222,0.148-0.282,0.449-0.134,0.672l1.208,1.813l0.539,0.808l0.547,0.819c-4.115,1.916-6.898,5.546-6.898,9.701h27.142   C41.919,14.114,39.136,10.484,35.021,8.568z M22.532,14.391c-0.805,0-1.455-0.651-1.455-1.454s0.65-1.453,1.455-1.453   c0.803,0,1.453,0.65,1.453,1.453S23.335,14.391,22.532,14.391z M34.163,14.391c-0.803,0-1.453-0.651-1.453-1.454   s0.65-1.453,1.453-1.453c0.805,0,1.455,0.65,1.455,1.453S34.968,14.391,34.163,14.391z"/><path d="M14.986,20.208h-0.209v2.418v1.973v16.936c0,1.693,1.376,3.07,3.069,3.07h2.216c-0.074,0.256-0.116,0.527-0.116,0.807   v0.162v0.969v5.01c0,1.605,1.303,2.908,2.909,2.908s2.908-1.303,2.908-2.908v-5.01v-0.969v-0.162c0-0.279-0.043-0.551-0.115-0.807   h5.4c-0.074,0.256-0.115,0.527-0.115,0.807v0.162v0.969v5.01c0,1.605,1.303,2.908,2.908,2.908s2.908-1.303,2.908-2.908v-5.01   v-0.969v-0.162c0-0.279-0.041-0.551-0.115-0.807h2.215c1.693,0,3.07-1.377,3.07-3.07V24.599v-1.973v-2.418H41.71H14.986z"/><path d="M9.929,20.208c-1.606,0-2.908,1.301-2.908,2.909v12.439c0,1.605,1.302,2.908,2.908,2.908c1.605,0,2.908-1.303,2.908-2.908   V23.116C12.837,21.509,11.535,20.208,9.929,20.208z"/><path d="M46.767,20.208c-1.607,0-2.908,1.301-2.908,2.909v12.439c0,1.605,1.301,2.908,2.908,2.908c1.605,0,2.906-1.303,2.906-2.908   V23.116C49.673,21.509,48.372,20.208,46.767,20.208z"/></g></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="overflow-hidden">
+        <img loading="eager" class="hover:scale-105 transition-transform duration-300 inline-block w-full lg:w-auto" src="./images/mockup-fundo-transparente.png" alt="Imagem do candidato a vereador Bruno Mezenga">
+      </div>
+    </section>
+    <section id="sobre" class="px-4 py-14 bg-slate-50 scroll-mt-8 text-slate-600">
+      <div class="lg:max-w-[1000px] mx-auto">
+        <h2 class="mb-7 text-3xl text-[#0097b8] font-bold border-b border-slate-200 pb-7">Sobre</h2>
+        <div class="flex flex-col gap-16 lg:gap-10">
+          <div class="flex flex-col gap-3">
+            <div class="flex flex-col gap-6">
+              <p class="leading-relaxed text-justify max-w-[700px] mb-8">Nosso aplicativo foi desenvolvido para transformar a interação entre estudantes e instituições, unindo simplicidade e tecnologia avançada para resolver problemas do dia a dia acadêmico.</p>
+              <div class="grid lg:grid-cols-2 gap-8">
+                <div>
+                  <h3 class="mb-1.5 font-bold text-[#0097b8] text-lg">O Problema</h3>
+                  <p class="leading-relaxed text-justify"> Muitos alunos enfrentam dificuldades para acessar informações essenciais, como notas, faltas, e horários de aula, além de lidar com barreiras físicas e tecnológicas ao entrar na instituição.</p>
+                </div>
+                <div class="order-last lg:order-none">
+                  <h3 class="mb-1.5 font-bold text-[#0097b8] text-lg">Tecnologias Utilizadas</h3>
+                  <ul class="marker:text-green-500 list-disc list-inside flex flex-col gap-2">
+                    <li>Figma para criar protótipos funcionais e atraentes.</li>
+                    <li>Visual Studio Code para desenvolver a interface.</li>
+                    <li>Banco de Dados para garantir a segurança dos dados.</li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 class="mb-1.5 font-bold text-[#0097b8] text-lg">A Solução</h3>
+                  <p class="leading-relaxed text-justify">Criamos uma plataforma que conecta diretamente o servidor da instituição ao seu smartphone, oferecendo acesso imediato a informações como notas, faltas e horários, além de permitir o desbloqueio de catracas por NFC ou QR Code.</p>
+                </div>
+                <div>
+                  <h3 class="mb-1.5 font-bold text-[#0097b8] text-lg">Desenvolvedores</h3>
+                  <ul class="marker:text-green-500 list-disc list-inside flex flex-col gap-2">
+                    <li>Ana Caroline Santana Moraes</li>
+                    <li>Evelyn Victoria da Silva Santos</li>
+                    <li>Kauê Costa Souza</li>
+                    <li>Lucas Balbino</li>
+                    <li>Richard Félix de Souza</li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 class="mb-1.5 font-bold text-[#0097b8] text-lg">Como Funciona</h3>
+                  <ul class="marker:text-green-500 list-disc list-inside flex flex-col gap-2">
+                    <li>Tela Inicial: Exibe o logo da instituição, estado do NFC, QR Code para acesso, e informações sobre suas aulas e horários.</li>
+                    <li>Tela de Horários: Uma visão completa da sua semana acadêmica com destaque para o dia atual.</li>
+                    <li>Tela de Perfil: Suas informações pessoais e institucionais reunidas, além de um painel prático para consulta de notas e faltas.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer id="#contato" class="px-4 pt-14 bg-[#0097b8] text-white/80">
+    <div class="lg:max-w-[1000px] lg:mx-auto text-center flex flex-col items-center gap-10 lg:flex-row lg:justify-between lg:text-left lg:pb-14 lg:items-start">
+      <div class="flex flex-col lg:mx-0 gap-7 lg:flex-row lg:items-start lg:gap-10">
+        <img loading="eager" class="w-40 mx-auto lg:mx-0" src="./images/logo.png" alt="Logo do candidato Bruno Mezenga">
+        <div>
+          <h3 class="mb-2 text-lg font-medium text-white uppercase lg:text-xl">Contato</h3>
+          <p>
+            (11) 99999-9999
+            <br>
+            teste@teste.com.br
+            <br>
+            Rua Andrômeda das Américas - Centro
+          </p>
+        </div>
+      </div>
+      <ul class="pb-10 flex items-center justify-center gap-2.5 lg:pb-0">
+        <li class="flex">
+          <a class="inline-block p-2 transition-colors duration-300 bg-white rounded-md lg:p-1 hover:bg-gray-50" href="#" target="_blank" rel="external">
+            <svg class="text-[#0097b8] size-7 lg:size-6" viewBox="0 0 512 512" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"></path></svg>
+          </a>
+        </li>
+        <li class="flex">
+          <a class="inline-block p-2 transition-colors duration-300 bg-white rounded-md lg:p-1 hover:bg-gray-50" href="#" target="_blank" rel="external">
+            <svg class="text-[#0097b8] size-7 lg:size-6" viewBox="0 0 448 512" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="py-5 border-t border-white/30">
+      <p class="text-center">Desenvolvido por <a class="font-medium text-white hover:underline" href="/">E-pass</a></p>
+    </div>
+  </footer>
+  <script src="./app.js"></script>
+</body>
+</html>
