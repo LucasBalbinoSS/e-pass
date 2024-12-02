@@ -13,11 +13,11 @@
 <body class="font-['Josefin_Sans']">
   <header class="px-4 py-0.5 border-b border-white/20 fixed z-10 inset-x-0 text-white bg-[#0097b8]">
     <div class="grid items-center grid-cols-3 lg:max-w-[1200px] lg:mx-auto">
-      <a class="col-span-2 w-max lg:col-span-1" href="#" target="_self">
-        <img class="h-20 lg:hidden" src="./images/logo_redonda.png" alt="Logo">
-        <img class="w-40 hidden lg:block" src="./images/logo.png" alt="Logo">
+      <a class="col-span-2 rounded-md w-max lg:col-span-1" href="#" target="_self">
+        <img class="h-20 lg:hidden" src="./images/logo_redonda.png" alt="Logo da E-pass">
+        <img class="w-40 hidden lg:block" src="./images/logo.png" alt="Logo da E-pass">
       </a>
-      <label class="flex cursor-pointer justify-self-end lg:hidden" for="topo-mobile">
+      <label tabindex="1" class="flex cursor-pointer justify-self-end lg:hidden" for="topo-mobile">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="size-9 text-white">
           <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
         </svg>
@@ -26,22 +26,22 @@
       <nav class="absolute invisible w-64 overflow-hidden bg-white text-[#0097b8] border border-gray-100 rounded-lg shadow-md opacity-0 border-opacity-80 top-full right-4 lg:hidden topo-mobile">
         <ul class="bg-white border-gray-100 shadow-md js-topo-mobile-lista">
           <li class="transition-colors duration-300 hover:bg-gray-50">
-            <a class="inline-block w-full p-4 transition-transform duration-75 active:scale-95" href="#servicos">E-pass</a>
+            <a tabindex="2" aria-label="Saiba mais sobre a E-pass" class="inline-block w-full p-4 transition-transform duration-75 active:scale-95" href="#servicos">E-pass</a>
           </li>
           <li class="transition-colors duration-300 hover:bg-gray-50">
-            <a class="inline-block w-full p-4 transition-transform duration-75 active:scale-95" href="#sobre">Aplicativo</a>
+            <a tabindex="3" aria-label="Saiba mais sobre nosso aplicativo" class="inline-block w-full p-4 transition-transform duration-75 active:scale-95" href="#sobre">Aplicativo</a>
           </li>
           <li class="transition-colors duration-300 hover:bg-gray-50">
-            <a class="inline-block w-full p-4 transition-transform duration-75 active:scale-95" href="#contato">Contato</a>
+            <a tabindex="4" aria-label="Entre em contato conosco" class="inline-block w-full p-4 transition-transform duration-75 active:scale-95" href="#contato">Contato</a>
           </li>
           <ul class="flex items-center gap-4 p-4">
             <li class="flex">
-              <a class="inline-block p-2 transition-colors duration-300 border border-gray-200 rounded-md hover:bg-gray-50" href="#" target="_blank" rel="external">
+              <a tabindex="5" aria-label="Acesse nosso Facebook" class="inline-block p-2 transition-colors duration-300 border border-gray-200 rounded-md hover:bg-gray-50" href="#" target="_blank" rel="external">
                 <svg class="size-7" viewBox="0 0 512 512" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"></path></svg>
               </a>
             </li>
             <li class="flex">
-              <a class="inline-block p-2 transition-colors duration-300 border border-gray-200 rounded-md hover:bg-gray-50" href="#" target="_blank" rel="external">
+              <a tabindex="6" aria-label="Acesse nosso Instagram" class="inline-block p-2 transition-colors duration-300 border border-gray-200 rounded-md hover:bg-gray-50" href="#" target="_blank" rel="external">
                 <svg class="size-7" viewBox="0 0 448 512" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg>
               </a>
             </li>
@@ -51,25 +51,25 @@
       <nav class="hidden lg:block justify-self-center">
         <ul class="flex items-center gap-2">
           <li class="relative after:h-2 after:rounded-full after:w-2 after:opacity-0 hover:after:opacity-100 after:transition-opacity after:duration-300 after:bg-white after:absolute after:-bottom-[0.95rem] after:left-1/2 after:transform after:-translate-x-1/2">
-            <a class="inline-block p-2" href="#servicos">E-pass</a>
+            <a tabindex="1" aria-label="Saiba mais sobre a E-pass" class="inline-block p-2 rounded-md" href="#servicos">E-pass</a>
           </li>
           <li class="relative after:h-2 after:rounded-full after:w-2 after:opacity-0 hover:after:opacity-100 after:transition-opacity after:duration-300 after:bg-white after:absolute after:-bottom-[0.95rem] after:left-1/2 after:transform after:-translate-x-1/2">
-            <a class="inline-block p-2" href="#sobre">Aplicativo</a>
+            <a tabindex="2" aria-label="Saiba mais sobre nosso aplicativo" class="inline-block p-2 rounded-md" href="#sobre">Aplicativo</a>
           </li>
           <li class="relative after:h-2 after:rounded-full after:w-2 after:opacity-0 hover:after:opacity-100 after:transition-opacity after:duration-300 after:bg-white after:absolute after:-bottom-[0.95rem] after:left-1/2 after:transform after:-translate-x-1/2">
-            <a class="inline-block p-2" href="#contato">Contato</a>
+            <a tabindex="3" aria-label="Entre em contato conosco" class="inline-block p-2 rounded-md" href="#contato">Contato</a>
           </li>
         </ul>
       </nav>
       <nav class="hidden lg:block">
         <ul class="flex items-center gap-2.5 justify-end">
           <li class="flex">
-            <a class="inline-block p-1 transition-colors duration-300 border border-white/50 rounded-md hover:bg-white group" href="#" target="_blank" rel="external">
+            <a tabindex="4" aria-label="Acesse nosso Facebook" class="inline-block p-1 transition-colors duration-300 border border-white/50 rounded-md hover:bg-white group" href="#" target="_blank" rel="external">
               <svg class="size-6 group-hover:text-[#0097b8]" viewBox="0 0 512 512" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"></path></svg>
             </a>
           </li>
           <li class="flex">
-            <a class="inline-block p-1 transition-colors duration-300 border border-white/50 rounded-md hover:bg-white group" href="#" target="_blank" rel="external">
+            <a tabindex="5" aria-label="Acesse nosso Instagram" class="inline-block p-1 transition-colors duration-300 border border-white/50 rounded-md hover:bg-white group" href="#" target="_blank" rel="external">
               <svg class="size-6 group-hover:text-[#0097b8]" viewBox="0 0 448 512" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg>
             </a>
           </li>
@@ -88,7 +88,7 @@
           <p class="leading-relaxed lg:text-lg lg:max-w-[33.75rem] text-justify">A E-pass garante promover a acessibilidade e segurança para com instituições, por meio de verificação digital na catraca, sendo apenas liberada para estudantes ou funcionários autorizados da instituição. Essa abordagem não apenas simplifica o processo de entrada, mas também reforça a segurança, impedindo o acesso de pessoas não previamente cadastradas no banco de dados da instituição.
         </div>
         <div class="overflow-hidden">
-          <img loading="eager" class="lg:hover:rotate-12 transition-transform duration-500 inline-block w-full lg:w-auto" src="./images/logo_redonda.png" alt="Imagem do candidato a vereador Bruno Mezenga">
+          <img loading="eager" class="lg:hover:rotate-12 transition-transform duration-500 inline-block w-full lg:w-auto" src="./images/logo_redonda.png" alt="Logo da E-pass">
         </div>
       </div>
     </section>
@@ -111,7 +111,7 @@
         </div>
       </div>
       <div class="overflow-hidden">
-        <img loading="eager" class="hover:scale-105 transition-transform duration-300 inline-block w-full lg:w-auto" src="./images/mockup-fundo-transparente.png" alt="Imagem do candidato a vereador Bruno Mezenga">
+        <img loading="eager" class="hover:scale-105 transition-transform duration-300 inline-block w-full lg:w-auto" src="./images/mockup-fundo-transparente.png" alt="Imagem do aplicativo em funcionamento">
       </div>
     </section>
     <section id="sobre" class="px-4 py-14 bg-slate-50 scroll-mt-8 text-slate-600">
@@ -166,7 +166,7 @@
   <footer id="#contato" class="px-4 pt-14 bg-[#0097b8] text-white/80">
     <div class="lg:max-w-[1000px] lg:mx-auto text-center flex flex-col items-center gap-10 lg:flex-row lg:justify-between lg:text-left lg:pb-14 lg:items-start">
       <div class="flex flex-col lg:mx-0 gap-7 lg:flex-row lg:items-start lg:gap-10">
-        <img loading="eager" class="w-40 mx-auto lg:mx-0" src="./images/logo.png" alt="Logo do candidato Bruno Mezenga">
+        <img loading="eager" class="w-40 mx-auto lg:mx-0" src="./images/logo.png" alt="Logo da E-pass">
         <div>
           <h3 class="mb-2 text-lg font-medium text-white uppercase lg:text-xl">Contato</h3>
           <p>

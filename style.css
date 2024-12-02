@@ -7,3 +7,8 @@
   visibility: visible;
   opacity: 1;
 }
+
+a:focus,
+button:focus {
+  outline: 3px solid #465E8E;
+}
