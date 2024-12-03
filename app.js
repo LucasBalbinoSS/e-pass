@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   menuFechar()
+  fontesAumentar()
 })
 
 const menuFechar = () => {
@@ -19,6 +20,32 @@ const menuFechar = () => {
   menuMobileLinks.forEach((menuMobileLink) => {
     menuMobileLink.addEventListener('click', () => {
       menuMobile.checked = false
+    })
+  })
+}
+
+const fontesAumentar = () => {
+  const textosLg = document.querySelectorAll('[data-tamanho-fonte]')
+  const btnAumentar = document.querySelector('.js-aumentar-fonte')
+  const btnDiminuir = document.querySelector('.js-diminuir-fonte')
+
+  btnAumentar.addEventListener('click', () => {
+    textosLg.forEach((textoLg) => {
+      let tamanhoAtual = parseInt(textoLg.dataset.tamanhoFonte);
+
+      tamanhoAtual++;
+      textoLg.dataset.tamanhoFonte = tamanhoAtual;
+      textoLg.style.fontSize = tamanhoAtual + 'px';
+    })
+  })
+
+  btnDiminuir.addEventListener('click', () => {
+    textosLg.forEach((textoLg) => {
+      let tamanhoAtual = parseInt(textoLg.dataset.tamanhoFonte);
+
+      tamanhoAtual--;
+      textoLg.dataset.tamanhoFonte = tamanhoAtual;
+      textoLg.style.fontSize = tamanhoAtual + 'px';
     })
   })
 }
